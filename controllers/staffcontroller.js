@@ -51,7 +51,7 @@ exports.deleteStudent= async(req, res) => {
   exports.editStudent = async (req, res, next) =>{
     const {name, lastName} = req.body 
     await User.findByIdAndUpdate(req.user._id, {name, lastName})
-    res.redirect('/studentprofile')
+    res.redirect('/staffprofile')
   }
   //.populate('invitedBy')
   

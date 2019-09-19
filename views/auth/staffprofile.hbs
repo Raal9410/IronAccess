@@ -4,7 +4,7 @@
     <h3>Students</h3>
 {{#each student as |user|}}
 <ul>
-    <li>{{user.name}} {{user.lastName}} - <b>{{{user.role}}}</b> <a href="/delete-student/{{this._id}}"><input type="submit" value="Delete"></a>
+    <li>{{user.name}} {{user.lastName}} - <b>{{{user.role}}}</b>  <a href="/delete-student/{{this._id}}"><input type="submit" value="Delete"></a>
     </li>
 </ul>
 {{/each}}

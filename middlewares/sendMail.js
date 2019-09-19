@@ -1,7 +1,7 @@
 const nodemailer = require('nodemailer')
 
 exports.mail = async (req, res, next) => {
-  const { email, name, lastName, message, subject, date, invitedBy } = req.body
+  const { email, name, lastName, message, subject, date, invitedBy} = req.body
   const transporter = nodemailer.createTransport({
     service: 'Gmail',
     auth: {
