@@ -11,7 +11,7 @@ const guestSchema = new Schema(
       required: true
     },
     code: {
-      type: String,
+      type: Number,
       unique: true
     },
     invitedBy: {
