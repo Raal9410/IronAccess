@@ -1,0 +1,62 @@
+<h1>Boss profile</h1>
+<h2>Welcome {{boss.name}} {{boss.lastName}}</h2>
+<div class="staff">
+    <h3>Staff</h3>
+{{#each staff as |user|}}
+<ul>
+    <li>{{user.name}} {{user.lastName}} - <b>{{{user.role}}}</b> <a href="/delete-user/{{this._id}}"><input type="submit" value="Delete"></a>
+    </li>
+</ul>
+{{/each}}
+</div>
+<a href="../create-staff"> 
+<button class="uk-button uk-button-primary uk-button-small" type="submit" value="Login">Create checkers</button></a>
+{{#each checker as |user|}}
+<ul>
+    <li>{{user.name}} {{user.lastName}} - <b>{{{user.role}}}</b> <a href="/delete-user/{{this._id}}"><input type="submit" value="Delete"></a>
+    </li>
+</ul>
+{{/each}}
+</div>
+<a href="../create-staff">
+<button class="uk-button uk-button-primary uk-button-small" type="submit" value="Login">Create staff</button></a>
+<br>
+<br>
+<a href="/logout">Logout</a>
+
+
+<div class="uk-child-width-1-2@s uk-grid-match" uk-grid>
+    <div>
+        <div class="uk-card uk-card-hover uk-card-body">
+            <h3 class="uk-card-title"></h3>
+            {{#each staff as |user|}}
+<ul>
+    <li>{{user.name}} {{user.lastName}} - <b>{{{user.role}}}</b> </li>
+    
+    
+    <li>{{user.email}}</li>
+   <p><a href="/delete-user/{{this._id}}"><input type="submit" value="Delete"></a> </p>
+</ul>
+{{/each}}
+
+        </div>
+    </div>
+    <div>
+        <div class="uk-card uk-card-hover uk-card-body">
+            <h3 class="uk-card-title">Hover</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+        </div>
+    </div>
+    <div>
+        <div class="uk-card uk-card-hover uk-card-body">
+            <h3 class="uk-card-title">Hover</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+        </div>
+    </div>
+    <div>
+        <div class="uk-card uk-card-hover uk-card-body">
+            <h3 class="uk-card-title">Hover</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+        </div>
+    </div>
+</div>
