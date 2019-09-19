@@ -38,9 +38,10 @@ exports.deleteStudent= async(req, res) => {
       max = 9999
       return  parseInt(Math.random( )*(max-min)+ min)      
     }
-
+    
     let codeInv = createCode()  
   const invitedBy = req.user._id 
+  
   const newguest=await Guest.create({...req.body, invitedBy, code: codeInv}) 
   const { email, name, lastName, message} = req.body
   const transporter = nodemailer.createTransport({
