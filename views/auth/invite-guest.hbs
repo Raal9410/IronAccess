@@ -4,7 +4,7 @@
   <div class="guest">
   <h2>Invite a alguien</h2>
   </div>
-
+<form action="/invite-guest" method="POST">
     <div class="uk-margin">
         <div class="uk-inline ">
             <span class="uk-form-icon" uk-icon="icon: user"></span>
@@ -23,17 +23,9 @@
             <span class="uk-form-icon " uk-icon="google"></span>
             <input class="uk-input" type="email" name="email" placeholder="Email">
         </div>
-    </div><div class="uk-margin">
-        <div class="uk-inline">
-            <span class="uk-form-icon " uk-icon="question"></span>
-            <input class="uk-input" type="text" name="subject" placeholder="subject">
-        </div>
-    </div><div class="uk-margin">
-        <div class="uk-inline">
-            <span class="uk-form-icon " uk-icon="users"></span>
-            <input class="uk-input" type="text" name="visiting" placeholder="Visiting ?">
-        </div>
-    </div><div class="uk-margin">
+    </div>
+  
+    <div class="uk-margin">
         <div class="uk-inline">
             <span class="uk-form-icon "uk-icon="comments"></span>
             <input class="uk-input" type="text" name="message" placeholder="message">
@@ -51,8 +43,6 @@
 <button class="uk-button uk-button-primary uk-button-small">Back</button></a>
 
 <button class="uk-button uk-button-primary uk-button-small" type="submit" value="Invite">Invite</button>
-</form>
-
 </form>
 </div>
 </div>

@@ -49,6 +49,23 @@
     </div>
     {{/each}}
 
+
+<div class="uk-child-width-1-2@s uk-grid-match" uk-grid>
+    {{#each guest as |user|}}
+    <div>
+        <div class="uk-card uk-card-hover uk-card-default uk-card-small uk-card-body uk-card-secondary">
+            <h3 class="uk-card-title uk-card-secondary"></h3>
+           
+
+    <h3>{{user.name}} {{user.lastName}} - <b>{{{user.role}}}</b> </h3>
+    <p>{{user.email}}</p>
+   <p><a href="/delete-student/{{this._id}}"><input type="submit" value="Delete"></a> </p>
+
+
+
+        </div>
+    </div>
+    {{/each}}
 <!--
 <h1>Staff profile</h1>
 <h2>Welcome {{staff.name}} {{staff.lastName}}</h2>
