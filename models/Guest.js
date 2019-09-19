@@ -12,7 +12,8 @@ const guestSchema = new Schema(
     },
     code: {
       type: Number,
-      unique: true
+      unique: true,
+      default: 0000
     },
     invitedBy: {
       type: Schema.Types.ObjectId,

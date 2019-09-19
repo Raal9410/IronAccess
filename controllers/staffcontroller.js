@@ -31,9 +31,20 @@ exports.deleteStudent= async(req, res) => {
   }
   
   exports.inviteGuest = async (req, res, next) =>{
-  const invitedBy = req.user._id  
-  const newGuest = await Guest.create({...req.body, invitedBy}) 
-  console.log(newGuest)
+    const createCode  = () =>{
+      min = 1000
+      max = 9999
+      return  parseInt(Math.random( )*(max-min)+ min)      
+    }
+
+    let codeInv = createCode()
+    
+  console.log('>>>>>>>>>>', codeInv)  
+  const invitedBy = req.user._id 
+  const newguest=await Guest.create({...req.body, invitedBy, code: codeInv}) 
+  .then(guest=> {
+    console.log(guest)
+  })
   res.redirect('/staffprofile')
   }
 

@@ -14,8 +14,10 @@ exports.mail = async (req, res, next) => {
     to: email,
     subject: `You have been invited to Ironhack ${name} ${lastName}!`,
     text: message,
-    html: `<p>${message}</p>`
+    html: `<p>${message}</p> <br> Invitation by <h3></h3>`
   })
   //res.render('message', { email, subject, message, name, lastName, info, date, invitedBy })
   next()
 }
+
+//${guest.invitedBy.name} ${guest.invitedBy.lastName}

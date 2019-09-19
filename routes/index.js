@@ -9,7 +9,7 @@ console.log(guestCode)
 const {login, loginForm, logout, profile, staffprofile, studentProfile} = require('../controllers/index.controller')
 
 const {createUser, createUserForm, deleteUser} = require('../controllers/bosscontroller')
-const {editStaffForm, editStaff, createStudentForm, createStudent, deleteStudent, inviteGuestForm, inviteGuest, deleteGuest, editStudentForm, editStudent} = require('../controllers/staffcontroller')
+const {editStaffForm, editStaff, createStudentForm, createStudent, deleteStudent, inviteGuestForm, inviteGuest, deleteGuest} = require('../controllers/staffcontroller')
 const {studentGuest, studentGuestForm, deleteStudentGuest} = require('../controllers/studentscontroller')
 /* GET home page */
 router.get('/', (req, res, next) => {
@@ -28,8 +28,6 @@ router.get('/delete-user/:id', ensureLogin.ensureLoggedIn(), checkRole('BOSS'), 
 router.get('/staffprofile', checkRole('STAFF'), ensureLogin.ensureLoggedIn(), staffprofile)
 router.get('/edit-staff', checkRole('STAFF'), ensureLogin.ensureLoggedIn(), editStaffForm)
 router.post('/edit-staff', checkRole('STAFF'), ensureLogin.ensureLoggedIn(), catchErrors(editStaff))
-//router.get('/edit-student', checkRole('STAFF'), ensureLogin.ensureLoggedIn(), editStudentForm)
-//router.post('/edit-student', checkRole('STAFF'), ensureLogin.ensureLoggedIn(), catchErrors(editStudent))
 router.get('/create-student', checkRole('STAFF'), ensureLogin.ensureLoggedIn(), createStudentForm)
 router.post('/create-student', checkRole('STAFF'), ensureLogin.ensureLoggedIn(), catchErrors(createStudent))
 router.get('/invite-guest', ensureLogin.ensureLoggedIn(), checkRole('STAFF'), inviteGuestForm)
