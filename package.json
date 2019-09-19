@@ -25,5 +25,20 @@
   },
   "devDependencies": {
     "nodemon": "^1.12.1"
-  }
+  },
+  "main": "app.js",
+  "bin": {
+    "project-module2": "seeds.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Raal9410/IronAccess.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Raal9410/IronAccess/issues"
+  },
+  "homepage": "https://github.com/Raal9410/IronAccess#readme",
+  "description": ""
 }
