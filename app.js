@@ -3,7 +3,7 @@ require('dotenv').config();
 const bodyParser   = require('body-parser');
 const cookieParser = require('cookie-parser');
 const express      = require('express');
-const favicon      = require('serve-favicon');
+
 const hbs          = require('hbs');
 const mongoose     = require('mongoose');
 const logger       = require('morgan');
@@ -13,7 +13,7 @@ const session      = require('express-session')
 const ensureLogin  = require('connect-ensure-login')
 
 mongoose
-  .connect('mongodb://localhost/IronAccess', {useNewUrlParser: true})
+  .connect(process.env.DB ||'mongodb://localhost/IronAccess', {useNewUrlParser: true})
   .then(x => {
     console.log(`Connected to Mongo! Database name: "${x.connections[0].name}"`)
   })
@@ -53,7 +53,7 @@ app.use(require('node-sass-middleware')({
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
 app.use(express.static(path.join(__dirname, 'public')));
-app.use(favicon(path.join(__dirname, 'public', 'images', 'favicon.ico')));
+
 
 
 
