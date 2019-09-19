@@ -46,7 +46,7 @@ exports.guestCheckProfileForm = async (req, res, next) => {
 exports.guestChecker = async(req,res, next) =>{
   const confirmguest = await Guest.find({code: req.body.code})
   console.log(confirmguest)
-  res.redirect('guestchecker', confirmguest)
+  res.redirect('guestchecker')
 }
 exports.logout =(req, res, next)=>{
   req.logout()
