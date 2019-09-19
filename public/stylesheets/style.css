@@ -1,6 +1,6 @@
 body {
-  padding: 50px;
-  font: 14px 'Lucida Grande', Helvetica, Arial, sans-serif; }
+  font: 14px 'Lucida Grande', Helvetica, Arial, sans-serif;
+  margin: 0; }
 
 a {
   color: #00b7ff; }
@@ -12,13 +12,38 @@ a {
 .logimg {
   background-image: url(../images/cdmx.jpg);
   background-size: cover;
-  height: 500px;
-  padding: 40px; }
+  height: 100vh;
+  width: 100vw;
+  background-position: center; }
 
 .image {
-  background-image: url(../images/cdmx.jpg); }
+  background-image: url(../images/cdmx.jpg);
+  background-size: cover; }
 
-h1 {
-  text-align: center; }
+.login {
+  padding-top: 80px; }
+
+.login h2 {
+  color: white; }
+
+.index {
+  background-image: url(../images/cdmx.jpg);
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+  background-position: center; }
+
+.index h2 {
+  text-align: center;
+  color: white;
+  font-size: 80px; }
+
+.index p {
+  text-align: center;
+  color: white;
+  font-size: 40px; }
+
+.paddinggeneral {
+  padding: 50px; }
 
 /*# sourceMappingURL=style.css.map */

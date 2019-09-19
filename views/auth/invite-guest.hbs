@@ -1,3 +1,4 @@
+<div class="paddinggeneral">
 <form action="/invite-guest" method="POST">
 <div class="uk-margin uk-flex">
     <div class="uk-align-center">
@@ -8,14 +9,14 @@
     <div class="uk-margin">
         <div class="uk-inline ">
             <span class="uk-form-icon" uk-icon="icon: user"></span>
-            <input class="uk-input " type="text" placeholder="name">
+            <input class="uk-input " type="text" name="name" placeholder="name">
         </div>
     </div>
 
     <div class="uk-margin">
         <div class="uk-inline">
             <span class="uk-form-icon  " uk-icon="user"></span>
-            <input class="uk-input " type="text" name="name" placeholder="Last name">
+            <input class="uk-input " type="text" name="lastName" placeholder="Last name">
         </div>
     </div>
     <div class="uk-margin">
@@ -46,33 +47,9 @@
 
 
 </form>
+</div>
 
 
 
 
 
-<h2>Invite someone</h2>
-
-<form action="/invite-guest" method="POST">
-<label for="name">Name</label>
-<input type="text" name="name" id="name" placeholder="Name">
-
-<label for="lastName">Last Name</label>
-<input type="text" name="lastName" id="lastName" placeholder="Last Name">
-
-<label for="email">Email</label>
-<input type="email" name="email" id="email" placeholder="Email">
-<br>
-<br>
-<label for="message">Message</label>
-<textarea type="text" name="message" id="" placeholder="Message"></textarea>
-<br>
-<br>
-<label for="date">Select Date</label>
-<input type="date" name="date" id="date">
-
-<input type="submit" value="Invite">
-</form>
-
-<a href="/staffprofile">Go Back</a>
-</form>
