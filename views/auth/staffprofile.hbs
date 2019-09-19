@@ -1,3 +1,4 @@
+
 <nav class="uk-navbar-container" uk-navbar>
     <div class="uk-navbar-left">
         <ul class="uk-navbar-nav">
@@ -29,6 +30,7 @@
 </nav>
 
 
+
 <br>
 <br>
 
@@ -53,11 +55,12 @@
 <div class="uk-child-width-1-2@s uk-grid-match" uk-grid>
     {{#each guest as |user|}}
     <div>
-        <div class="uk-card uk-card-hover uk-card-default uk-card-small uk-card-body uk-card-primary">
-            <h3 class="uk-card-title uk-card-primary"></h3>
+        <div class="uk-card uk-card-hover uk-card-default uk-card-small uk-card-body uk-card-secondary">
+            <h3 class="uk-card-title uk-card-secondary"></h3>
            
 
-    <h3>{{user.name}} {{user.lastName}} - <b>GUEST</b> </h3>
+    <h3>{{this.name}} {{this.lastName}} - <b>GUEST</b> </h3>
+        <p><b>{{{this.date}}}</b></p> 
     <p>{{user.email}}</p>
    <p><a href="/delete-guest/{{this._id}}"><input type="submit" value="Delete"></a> </p>
 

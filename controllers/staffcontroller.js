@@ -1,5 +1,7 @@
 const User = require('../models/User')
 const Guest = require('../models/Guest')
+const nodemailer = require('nodemailer')
+
 exports.editStaffForm = (req, res, next) =>{
     res.render('auth/edit-staff', )
 }
@@ -37,14 +39,27 @@ exports.deleteStudent= async(req, res) => {
       return  parseInt(Math.random( )*(max-min)+ min)      
     }
 
-    let codeInv = createCode()
-    
-  console.log('>>>>>>>>>>', codeInv)  
+    let codeInv = createCode()  
   const invitedBy = req.user._id 
   const newguest=await Guest.create({...req.body, invitedBy, code: codeInv}) 
-  .then(guest=> {
-    console.log(guest)
+  const { email, name, lastName, message} = req.body
+  const transporter = nodemailer.createTransport({
+    service: 'Gmail',
+    auth: {
+      user: process.env.EMAIL,
+      pass: process.env.PASSWORD
+    }
   })
+  const info = await transporter.sendMail({
+    from: ` IronAccess <${process.env.EMAIL}>`,
+    to: email,
+    subject: `You have been invited to Ironhack ${name} ${lastName}!`,
+    text: message,
+    html: `<p>${message}</p> <p>Your code is ${codeInv}</p><br> Invitation by`
+  })
+  //res.render('message', { email, subject, message, name, lastName, info, date, invitedBy })
+  next()
+
   res.redirect('/staffprofile')
   }
 

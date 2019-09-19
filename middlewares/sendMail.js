@@ -1,7 +1,8 @@
 const nodemailer = require('nodemailer')
-
+const Guest = require('../models/Guest')
 exports.mail = async (req, res, next) => {
-  const { email, name, lastName, message, subject, date, invitedBy} = req.body
+  const guestCode = await Guest.find({code})
+  const { email, name, lastName, message, subject, date} = req.body
   const transporter = nodemailer.createTransport({
     service: 'Gmail',
     auth: {
@@ -14,7 +15,7 @@ exports.mail = async (req, res, next) => {
     to: email,
     subject: `You have been invited to Ironhack ${name} ${lastName}!`,
     text: message,
-    html: `<p>${message}</p> <br> Invitation by <h3></h3>`
+    html: `<p>${message}</p> <p>Your code is ${guestCode}</p><br> Invitation by`
   })
   //res.render('message', { email, subject, message, name, lastName, info, date, invitedBy })
   next()

@@ -4,8 +4,7 @@ const ensureLogin = require('connect-ensure-login')
 const { catchErrors } = require('../middlewares/catchErrors')
 const checkRole = require('../middlewares/checkRole')
 const {mail} = require('../middlewares/sendMail')
-const {guestCode} = require('../middlewares/createCode')
-console.log(guestCode)
+
 const {login, loginForm, logout, profile, staffprofile, studentProfile} = require('../controllers/index.controller')
 
 const {createUser, createUserForm, deleteUser} = require('../controllers/bosscontroller')
@@ -31,7 +30,7 @@ router.post('/edit-staff', checkRole('STAFF'), ensureLogin.ensureLoggedIn(), cat
 router.get('/create-student', checkRole('STAFF'), ensureLogin.ensureLoggedIn(), createStudentForm)
 router.post('/create-student', checkRole('STAFF'), ensureLogin.ensureLoggedIn(), catchErrors(createStudent))
 router.get('/invite-guest', ensureLogin.ensureLoggedIn(), checkRole('STAFF'), inviteGuestForm)
-router.post('/invite-guest', ensureLogin.ensureLoggedIn(), checkRole('STAFF'), mail, catchErrors(inviteGuest))
+router.post('/invite-guest', ensureLogin.ensureLoggedIn(), checkRole('STAFF'), catchErrors(inviteGuest))
 router.get('/delete-guest/:id', ensureLogin.ensureLoggedIn(), checkRole('STAFF'), catchErrors(deleteGuest))
 router.get('/delete-student/:id', ensureLogin.ensureLoggedIn(), checkRole('STAFF'), catchErrors(deleteStudent))
 
