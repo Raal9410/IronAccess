@@ -1,3 +1,55 @@
+<nav class="uk-navbar-container" uk-navbar>
+    <div class="uk-navbar-left">
+        <ul class="uk-navbar-nav">
+            <li class="uk-active"><a href="#">Staff profile</a></li>
+            <li>
+                <a href="#"> {{staff.name}} {{staff.lastName}}</a>
+        </div></li>
+            
+        </ul>
+
+    </div>
+
+    <div class="uk-navbar-right">
+
+        <ul class="uk-navbar-nav">
+            <li class="uk-active"><a href="../create-student">Create student</a></li>
+            <li>
+                <li class="uk-active"><a href="../invite-guest">Invite someone</a></li>
+            <li>
+                  <li class="uk-active"><a href="../edit-staff">Edit your profile</a></li>
+            <li>
+                
+          
+            <li><a href="/logout">Logout</a></li>
+        </ul>
+
+    </div>
+
+</nav>
+
+
+<br>
+<br>
+
+<div class="uk-child-width-1-2@s uk-grid-match" uk-grid>
+    {{#each student as |user|}}
+    <div>
+        <div class="uk-card uk-card-hover uk-card-default uk-card-small uk-card-body uk-card-primary">
+            <h3 class="uk-card-title uk-card-primary"></h3>
+           
+
+    <h3>{{user.name}} {{user.lastName}} - <b>{{{user.role}}}</b> </h3>
+    <p>{{user.email}}</p>
+   <p><a href="/delete-user/{{this._id}}"><input type="submit" value="Delete"></a> </p>
+
+
+
+        </div>
+    </div>
+    {{/each}}
+
+<!--
 <h1>Staff profile</h1>
 <h2>Welcome {{staff.name}} {{staff.lastName}}</h2>
 <div class="students">
@@ -29,3 +81,4 @@
 <br>
 <br>
 <a href="/logout">Logout</a>
+-->

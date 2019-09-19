@@ -1,19 +1,49 @@
+
+
+
+<div class="uk-panel uk-flex">
+  <div class="uk-align-center">
+    <h2>Create Staff</h2>
+
 <form action="/create-staff" method="POST">
-<label for="name">Name</label>
-<input type="text" name="name" id="name" placeholder="Name">
-<label for="lastName">Last Name</label>
-<input type="text" name="lastName" id="lastName" placeholder="Last Name">
-<label for="email">Email</label>
-<input type="email" name="email" id="email">
-<label for="role">Select Role</label>
+<div class="uk-margin">
+        <div class="uk-inline">
+            <span class="uk-form-icon" uk-icon="icon: user"></span>
+            <input class="uk-input" id="name" name="name" placeholder="name">
+        </div>
+    </div>
+
+    <div class="uk-margin">
+        <div class="uk-inline">
+            <span class="uk-form-icon " uk-icon="user"></span>
+            <input class="uk-input " id="lastName" name="lastName" placeholder="Last name">
+        </div>
+    </div>
+    <div class="uk-margin">
+        <div class="uk-inline">
+            <span class="uk-form-icon " uk-icon="google"></span>
+            <input class="uk-input" type="email" name="email" placeholder="Email">
+        </div>
+    </div>
+    
+    <div class="uk-margin">
+        <div class="uk-inline">
+            <span class="uk-form-icon " uk-icon="icon:lock"></span>
+            <input class="uk-input" type="text" name="password" placeholder="Password ?">
+        </div>
+    </div>
+    <div>
+    <label for="role">Select Role</label>
 <select name="role" id="role">
   <option value="STAFF">Staff</option>
   <option value="CHECKER">Checker</option>
 </select>
-<label for="password">Password</label>
-<input type="text" name="password" id="password">
-<input type="submit" value="Create">
-<br>
-<br>
-<a href="/profile">Go Back</a>
-</form>
+    <br>
+    <br>
+    </div>
+   
+     <input type="submit" value="Create">
+     
+     </form>
+  </div>
+  </div>

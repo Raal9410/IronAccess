@@ -1,4 +1,66 @@
+<div class="uk-panel uk-flex">
+  <div class="uk-align-center">
+<h2>Create student</h2>
 <form action="/create-student" method="POST">
+<div class="uk-margin">
+        <div class="uk-inline">
+            <span class="uk-form-icon" uk-icon="icon: user"></span>
+            <input class="uk-input" type="text" name="name" placeholder="name">
+        </div>
+    </div>
+
+    <div class="uk-margin">
+        <div class="uk-inline">
+            <span class="uk-form-icon " uk-icon="user"></span>
+            <input class="uk-input " id="lastName" name="lastName" placeholder="Last name">
+        </div>
+    </div>
+    <div class="uk-margin">
+        <div class="uk-inline">
+            <span class="uk-form-icon " uk-icon="google"></span>
+            <input class="uk-input" type="email" name="email" placeholder="Email">
+        </div>
+    </div>
+    
+    <div class="uk-margin">
+        <div class="uk-inline">
+            <span class="uk-form-icon " uk-icon="icon:lock"></span>
+            <input class="uk-input" type="text" name="password" placeholder="Password ?">
+        </div>
+    </div>
+    <div>
+        <select name="course" id="course">
+       <option value="WEBDEV">Web Development</option>
+       <option value="UX">UX/UI</option>
+       <option value="DATA">Data Analytic</option>
+        </select>
+    </div>
+    <br>
+    <br>
+    <input type="submit" value="Create">
+<br>
+<br>
+<a href="/staffprofile">Go Back</a>
+    
+   </form>
+     </div>
+     </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
+  <form action="/create-student" method="POST">
 <label for="name">Name</label>
 <input type="text" name="name" id="name" placeholder="Name">
 <label for="lastName">Last Name</label>
@@ -18,3 +80,4 @@
 <br>
 <a href="/staffprofile">Go Back</a>
 </form>
+-->
