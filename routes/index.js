@@ -5,6 +5,7 @@ const { catchErrors } = require('../middlewares/catchErrors')
 const checkRole = require('../middlewares/checkRole')
 const {mail} = require('../middlewares/sendMail')
 const {guestCode} = require('../middlewares/createCode')
+console.log(guestCode)
 const {login, loginForm, logout, profile, staffprofile, studentProfile} = require('../controllers/index.controller')
 
 const {createUser, createUserForm, deleteUser} = require('../controllers/bosscontroller')
