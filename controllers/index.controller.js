@@ -10,7 +10,7 @@ exports.login = (req, res, next) => {
   } else if (req.user.role === 'STAFF') {
     res.redirect('/staffprofile')
   } else if (req.user.role === 'CHECKER') {
-    res.redirect('/checkinvitations')
+    res.redirect('/guestchecker')
   } else if (req.user.role === 'STUDENT') {
     res.redirect('/studentprofile')
   }else{ 
@@ -38,6 +38,16 @@ const student = await User.findById(req.user._id)
 const guest = await Guest.find({invitedBy: req.user._id})
 res.render('auth/studentprofile', {student, guest}) //, {user: req.user}
   }
+
+exports.guestCheckProfileForm = async (req, res, next) => {
+  res.render('auth/guestcheker')
+}
+
+exports.guestChecker = async(req,res, next) =>{
+  const confirmguest = await Guest.find({code: req.body.code})
+  console.log(confirmguest)
+  res.redirect('guestchecker', confirmguest)
+}
 exports.logout =(req, res, next)=>{
   req.logout()
   res.redirect('login')

@@ -55,7 +55,7 @@ exports.deleteStudent= async(req, res) => {
     to: email,
     subject: `You have been invited to Ironhack ${name} ${lastName}!`,
     text: message,
-    html: `<p>${message}</p> <p>Your code is ${codeInv}</p><br> Invitation by`
+    html: `<p>${message}</p> <p>Your code is ${codeInv}</p><br> Invitation by `
   })
   //res.render('message', { email, subject, message, name, lastName, info, date, invitedBy })
   next()
@@ -69,17 +69,6 @@ exports.deleteStudent= async(req, res) => {
     res.redirect('/staffprofile')
     
   }
-
-  exports.editStudentForm = (req, res, next) =>{
-    res.render('auth/edit-student', )
-  }
-  
-  exports.editStudent = async (req, res, next) =>{
-    const {name, lastName} = req.body 
-    await User.findByIdAndUpdate(req.user._id, {name, lastName})
-    res.redirect('/staffprofile')
-  }
-
 
   
   //.populate('invitedBy')
