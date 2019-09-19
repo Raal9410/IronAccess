@@ -10,7 +10,7 @@ const boss =
   }
 
   mongoose
-  .connect('mongodb://localhost/project-module2', { useNewUrlParser: true })
+  .connect('mongodb://localhost/IronAccess', { useNewUrlParser: true })
   .then(async () => {
     const user = await User.register(boss, boss.password='1234')
     console.log(`Boss created`)

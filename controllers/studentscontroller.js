@@ -1,22 +1,20 @@
 const Guest = require('../models/Guest')
 
 
-exports.editStudentForm = (req, res, next) =>{
-  res.render('auth/edit-student', )
+exports.studentGuestForm = async (req, res, next) => {
+  res.render('auth/student-guest')
 }
 
-exports.editStudent = async (req, res, next) =>{
-  const {name, lastName} = req.body 
-  await User.findByIdAndUpdate(req.user._id, {name, lastName})
-  res.redirect('/studentprofile')
-}
-
-exports.inviteGuestForm = async (req, res, next) => {
-  res.render('auth/invite-guest')
-}
-
-exports.inviteGuest = async (req, res, next) =>{
-const newGuest = await Guest.create({...req.body})
+exports.studentGuest = async (req, res, next) =>{
+const invitedBy = req.user._id  
+const newGuest = await Guest.create({...req.body, invitedBy}) 
 console.log(newGuest)
-res.redirect('/staffprofile')
+res.redirect('/studentprofile')
+}
+
+exports.deleteStudentGuest= async(req, res) => {
+  const {id} = req.params
+  await Guest.findByIdAndDelete(id)
+  res.redirect('/studentprofile')
+  
 }

@@ -33,10 +33,10 @@ const guest = await Guest.find({invitedBy: req.user._id})
 console.log(guest)
 res.render('auth/staffprofile', {staff, student, guest}) //, {user: req.user}
 }
-exports.studentprofile = async(req,res,next)=>{
+exports.studentProfile = async(req,res,next)=>{
 const student = await User.findById(req.user._id)
-//const student = await User.find({role: 'STUDENT'})
-res.render('auth/studentprofile', {student}) //, {user: req.user}
+const guest = await Guest.find({invitedBy: req.user._id})
+res.render('auth/studentprofile', {student, guest}) //, {user: req.user}
   }
 exports.logout =(req, res, next)=>{
   req.logout()
