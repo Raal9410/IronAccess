@@ -17,5 +17,5 @@ exports.mail = async (req, res, next) => {
     html: `<p>${message}</p>`
   })
   next()
-  //res.render('message', { email, subject, message, name, lastName, info, date })
+  res.render('message', { email, subject, message, name, lastName, info, date })
 }
