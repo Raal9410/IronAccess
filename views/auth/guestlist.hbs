@@ -1,13 +1,12 @@
 <h1>Invitado</h1>
 
-{{name}}
-<br>
- {{lastName}}
+{{name}} {{lastName}}
  <br>
   {{date}}
-  {{invitedBy.name}} {{invitedBy.lastName}}
+  <br>
+  Invitado por: {{invitedBy.[0].name}} {{invitedBy.[0].lastName}}
   
-
+<br>
 <a href="/remove-guest/?code={{code}}"><input type="submit" value="Borrar"></a>
 
 <br>

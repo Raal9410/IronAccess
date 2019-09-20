@@ -15,10 +15,10 @@ const guestSchema = new Schema(
       unique: true,
       default: 0000
     },
-    invitedBy: {
+    invitedBy: [{
       type: Schema.Types.ObjectId,
       ref: 'User'
-    }
+    }]
   },
   {
     timestamps: true

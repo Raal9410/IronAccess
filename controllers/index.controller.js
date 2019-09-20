@@ -50,7 +50,7 @@ exports.guestCheckerForm = (req,res, next) => {
 }
 
 exports.guestChecker = async(req,res, next) =>{
-  const confirmguest = await Guest.findOne({code: req.query.code})
+  const confirmguest = await Guest.findOne({code: req.query.code}).populate('invitedBy')
   console.log(confirmguest)
   res.render('auth/guestlist', confirmguest)
 }
