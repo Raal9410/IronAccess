@@ -14,7 +14,7 @@ const ensureLogin  = require('connect-ensure-login')
 //process.env.DB
 
 mongoose
-  .connect('mongodb://localhost/IronAccess', {useNewUrlParser: true})
+  .connect(process.env.DB, {useNewUrlParser: true})
   .then(x => {
     console.log(`Connected to Mongo! Database name: "${x.connections[0].name}"`)
   })
