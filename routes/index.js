@@ -15,7 +15,7 @@ router.get('/', (req, res, next) => {
   res.render('index')
 })
 
-router.get('/login', loginForm)
+router.get('/', loginForm)
 router.post('/login', passport.authenticate('local'), login)
 //Boss routes
 router.get('/profile', checkRole('BOSS'), ensureLogin.ensureLoggedIn(), profile)

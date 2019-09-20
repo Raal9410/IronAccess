@@ -35,7 +35,7 @@
 
           <div class="uk-width-expand">
             <h3 class="uk-card-title uk-margin-remove-bottom">{{name}} {{lastName}}</h3>
-            <p class="uk-text-meta uk-margin-remove-top"><time datetime="2016-04-01T19:00">{{date}}</time></p>
+            <p class="uk-text-meta uk-margin-remove-top">{{date}}</p>
           </div>
         </div>
       </div>
@@ -44,8 +44,10 @@
   <h4>Invitado por: {{invitedBy.[0].name}} {{invitedBy.[0].lastName}}</h4>
       </div>
       <div class="uk-card-footer">
-        <a href="/remove-guest/?code={{code}}" class="uk-button uk-button-text" type="submit"
-          value="borrar">Checkout</a>
+        <a href="/remove-guest/?code={{code}}"><input class="uk-button uk-button-text" type="submit"
+          value="CHECKOUT"></a>
+          <br>
+          <br>
         <a href="/guestchecker" class="uk-button uk-button-text" type="submit" value="">Buscar invitado</a>
       </div>
     </div>
