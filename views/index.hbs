@@ -1,5 +1,44 @@
 <div class="index">
-  <h2>IronAccess</h2>
-<p><a href="/login">
-<button> Enter to your account</button></a></p>
+  <img class="img" src="../images/logo.png" alt="ds">
+  <p uk-margin>
+    <a class="uk-button uk-button-default uk-button-primary" href="#modal-group-1" uk-toggle>Enter to your account</a>
+  </p>
+
+  <div id="modal-group-1" uk-modal>
+    <div class="uk-modal-dialog uk-container-xsmall alto">
+      <button class="uk-modal-close-default" type="button" uk-close></button>
+      <div class="uk-modal-header">
+        <h2 class="uk-modal-title uk-align-center"><img class="imgindex" src="/images/logo.png" alt=""> Login</h2>
+      </div>
+      <div class="uk-modal-body">
+        <div class="loginform">
+          <form action="/login" method="POST">
+
+            <div>
+
+              <div class="uk-margin uk-position-center">
+                <div class="uk-inline">
+
+                  <span class="uk-form-icon" uk-icon="icon: user"></span>
+
+                  <input class="uk-input" type="email" name="email" placeholder="Email">
+                </div>
+                <div class="uk-inline">
+                  <span class="uk-form-icon " uk-icon="icon: lock"></span>
+                  <input class="uk-input" type="password" name="password" placeholder="Password">
+                </div>
+                <p uk-margin>
+                  <br>
+                  <br>
+                  <button class="uk-button uk-button-primary uk-button-small" type="submit" value="Login">Login</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  -->
+
 </div>

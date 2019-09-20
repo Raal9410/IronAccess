@@ -1,7 +1,7 @@
 const User = require('../models/User')
 const Guest = require('../models/Guest')
 exports.loginForm = (req, res, next) => {
-  res.render('auth/login')
+  res.render('/')
 }
 
 exports.login = (req, res, next) => {
@@ -10,11 +10,11 @@ exports.login = (req, res, next) => {
   } else if (req.user.role === 'STAFF') {
     res.redirect('/staffprofile')
   } else if (req.user.role === 'CHECKER') {
-    res.redirect('/guestlist')
+    res.redirect('/guestchecker')
   } else if (req.user.role === 'STUDENT') {
     res.redirect('/studentprofile')
   }else{ 
-    res.redirect('/login')
+    res.redirect('/')
   }
 }
 
@@ -64,5 +64,5 @@ exports.removeGuest= async(req, res) => {
 
 exports.logout =(req, res, next)=>{
   req.logout()
-  res.redirect('login')
+  res.redirect('/')
 }

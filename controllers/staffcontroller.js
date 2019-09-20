@@ -54,9 +54,9 @@ exports.deleteStudent= async(req, res) => {
   const info = await transporter.sendMail({
     from: ` IronAccess <${process.env.EMAIL}>`,
     to: email,
-    subject: `You have been invited to Ironhack ${name} ${lastName}!`,
+    subject: `¡Has sido invitado a Ironhack${name} ${lastName}!!`,
     text: message,
-    html: `<p>${message}</p> <p>Your code is ${codeInv}</p><br> Invitation by `
+    html: `<p>${message}</p> <p>Tu código de acceso es: <br> <b>${codeInv}</b></p> <br><br><br> Invitado por <b>Ironhack</b> `
   })
   //res.render('message', { email, subject, message, name, lastName, info, date, invitedBy })
   next()

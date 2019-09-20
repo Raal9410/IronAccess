@@ -20,14 +20,20 @@ a {
   background-image: url(../images/cdmx.jpg);
   background-size: cover; }
 
-.login {
-  padding-top: 80px; }
+.login img {
+  height: 350px;
+  margin: auto;
+  display: block;
+  padding-top: 40px; }
 
 .login h2 {
   color: white; }
 
+.loginform {
+  margin-top: 500px; }
+
 .index {
-  background-image: url(../images/cdmx.jpg);
+  background-image: url(../images/cdmx2.png);
   background-size: cover;
   width: 100vw;
   height: 100vh;
@@ -45,5 +51,32 @@ a {
 
 .paddinggeneral {
   padding: 50px; }
+
+.img {
+  height: 350px;
+  margin: auto;
+  display: block;
+  padding-top: 40px; }
+
+.uk-modal-dialog.uk-container-xsmall.alto {
+  height: 300px; }
+
+.imgindex {
+  height: 40px; }
+
+.uk-margin.uk-position-center {
+  margin-top: 10px; }
+
+.uk-active p {
+  margin-left: 20px; }
+
+.uk-button.uk-button-primary.uk-button-small a {
+  color: white; }
+
+.uk-button.uk-button-primary.uk-button-small.staffprofilebutton {
+  color: black; }
+
+.uk-button.uk-button-primary.uk-button-small.staffprofilebutton {
+  color: black; }
 
 /*# sourceMappingURL=style.css.map */

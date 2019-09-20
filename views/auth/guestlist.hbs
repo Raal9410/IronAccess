@@ -1,18 +1,54 @@
-<h1>Invitado</h1>
+<nav class="uk-navbar-container" uk-navbar>
+  <div class="uk-navbar-left">
+    <ul class="uk-navbar-nav">
+      <li class="uk-active"><a href="#"><img class="imgindex" src="/images/logo.png" alt="">
+          <p>Perfil de Checker</p>
+        </a></li>
+      <li>
+  </div>
+  </li>
+  </div>
 
-{{name}} {{lastName}}
- <br>
-  {{date}}
-  <br>
-  Invitado por: {{invitedBy.[0].name}} {{invitedBy.[0].lastName}}
   
-<br>
-<a href="/remove-guest/?code={{code}}"><input type="submit" value="Borrar"></a>
+  <div class="uk-navbar-right">
+
+    <ul class="uk-navbar-nav">
+      <li>
+        <a href="/logout">Logout</a>
+      </li>
+    </ul>
+
+  </div>
+
+</nav>
+
+
 
 <br>
 <br>
-<a href="/guestchecker">Buscar invitado</a>
+<div class="paddinggeneral">
+  <div class="uk-panel uk-flex">
+    <div class="uk-align-center">
+    <div class="uk-card uk-card-default">
+      <div class="uk-card-header">
+        <div class="uk-grid-small uk-flex-middle" uk-grid>
 
-<br>
-<br>
-<a href="/logout">Logout</a>
+          <div class="uk-width-expand">
+            <h3 class="uk-card-title uk-margin-remove-bottom">{{name}} {{lastName}}</h3>
+            <p class="uk-text-meta uk-margin-remove-top"><time datetime="2016-04-01T19:00">{{date}}</time></p>
+          </div>
+        </div>
+      </div>
+      <div class="uk-card-body">
+
+  <h4>Invitado por: {{invitedBy.[0].name}} {{invitedBy.[0].lastName}}</h4>
+      </div>
+      <div class="uk-card-footer">
+        <a href="/remove-guest/?code={{code}}" class="uk-button uk-button-text" type="submit"
+          value="borrar">Checkout</a>
+        <a href="/guestchecker" class="uk-button uk-button-text" type="submit" value="">Buscar invitado</a>
+      </div>
+    </div>
+    </div>
+  </div>
+</div>

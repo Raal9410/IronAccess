@@ -3,24 +3,22 @@
     <div class="uk-navbar-left">
 
         <ul class="uk-navbar-nav">
-            <li class="uk-active"><a href="#">Perfil del jefe</a></li>
+            <li class="uk-active"><a href="#"><img class="imgindex" src="/images/logo.png" alt="">
+                    <p>Perfil del Jefe</p>
+                </a></li>
             <li>
                 <a href="#"> {{boss.name}} {{boss.lastName}}</a>
-               
-                </div>
-            </li>
-            
-        </ul>
 
+    </li>
+    </ul>
     </div>
-
     <div class="uk-navbar-right">
 
         <ul class="uk-navbar-nav">
             <li class="uk-active"><a href="../create-staff">Crear staff</a></li>
             <li>
-                
-          
+
+
             <li><a href="/logout">Logout</a></li>
         </ul>
 
@@ -35,35 +33,27 @@
     <div>
         <div class="uk-card uk-card-hover uk-card-default uk-card-small uk-card-body uk-card-primary">
             <h3 class="uk-card-title uk-card-primary"></h3>
-           
 
-    <h3>{{user.name}} {{user.lastName}} - <b>{{{user.role}}}</b> </h3>
-    <p>{{user.email}}</p>
-   <p><a href="/delete-user/{{this._id}}"><input type="submit" value="Borrar"></a> </p>
 
+            <h3>{{user.name}} {{user.lastName}} - <b>{{{user.role}}}</b> </h3>
+            <p>{{user.email}}</p>
+            <a href="/delete-user/{{user._id}}"><button class="uk-button uk-button-primary uk-button-small staffprofilebutton" type="submit"
+                value="Borrar">Borrar</button></a>
 
 
         </div>
     </div>
     {{/each}}
-    
-{{#each checker as |user|}}
+
+    {{#each checker as |user|}}
     <div>
         <div class="uk-card uk-card-hover uk-card-default uk-card-small uk-card-body uk-card-secondary">
             <h3 class="uk-card-title uk-card-secondary"></h3>
-           
-
-    <h3>{{user.name}} {{user.lastName}} - <b>{{{user.role}}}</b> </h3>
-    <p>{{user.email}}</p>
-   <p><a href="/delete-user/{{this._id}}"><input type="submit" value="Borrar"></a> </p>
 
 
-
-        </div>
-    </div>
-    {{/each}}
-    
-
-
-
-    
+            <h3>{{user.name}} {{user.lastName}} - <b>{{{user.role}}}</b> </h3>
+            <p>{{user.email}}</p>
+            <a href="/delete-user/{{user._id}}"><button class="uk-button uk-button-primary uk-button-small staffprofilebutton" type="submit"
+                value="Borrar">Borrar</button></a>
+                    </div>
+                    </div> {{/each}}
