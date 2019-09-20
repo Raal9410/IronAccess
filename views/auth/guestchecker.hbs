@@ -1,0 +1,41 @@
+<nav class="uk-navbar-container" uk-navbar>
+  <div class="uk-navbar-left">
+    <ul class="uk-navbar-nav">
+      <li class="uk-active"><a href="#"><img class="imgindex" src="/images/logo.png" alt="">
+          <p>Perfil de Checker</p>
+        </a></li>
+      <li>
+        <a href="#"> {{checker.name}} {{checker.lastName}}</a>
+  </div>
+  </li>
+  </div>
+
+  <div class="uk-navbar-right">
+
+    <ul class="uk-navbar-nav">
+      <li>
+        <a href="/">Logout</a>
+      </li>
+    </ul>
+
+  </div>
+
+</nav>
+<div class="paddinggeneral">
+  <div class="uk-panel uk-flex">
+    <div class="uk-align-center">
+      <div class="uk-card uk-card-default uk-card-body ">
+        <h3 class="uk-card-title">Perfil de Checker</h3>
+        <div class="uk-active">
+          <img class="imgindex" src="/images/logo.png" alt="">
+        </div>
+        <p>busque el usuario
+          <form action="/guest-checker">
+            <input class="uk-input " type="text" name="code" id="code" placeholder="Buscar">
+            <button class="uk-button " type="submit">Buscar</button>
+          </form>
+      </div>
+    </div>
+  </div>
+</div>
+

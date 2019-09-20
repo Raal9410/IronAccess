@@ -3,24 +3,24 @@
     <div class="uk-navbar-left">
 
         <ul class="uk-navbar-nav">
-            <li class="uk-active"><a href="#"><img class="imgindex" src="/images/logo.png" alt=""> <p> Boss profile</p></a></li>
+            <li class="uk-active"><a href="#">Perfil del jefe</a></li>
             <li>
                 <a href="#"> {{boss.name}} {{boss.lastName}}</a>
-               
-                </div>
-            </li>
-            
-        </ul>
+
+    </div>
+    </li>
+
+    </ul>
 
     </div>
 
     <div class="uk-navbar-right">
 
         <ul class="uk-navbar-nav">
-            <li class="uk-active"><a href="../create-staff">Create staff</a></li>
+            <li class="uk-active"><a href="../create-staff">Crear staff</a></li>
             <li>
-                
-          
+
+
             <li><a href="/">Logout</a></li>
         </ul>
 
@@ -28,37 +28,6 @@
 
 </nav>
 
-
-
-
-
-
-
-
-
-
-
-<!--
-    <div class="staff">
-    
-{{#each staff as |user|}}
-<ul>
-    <li>{{user.name}} {{user.lastName}} - <b>{{{user.role}}}</b> <a href="/delete-user/{{this._id}}"><input type="submit" value="Delete"></a>
-    </li>
-</ul>
-{{/each}}
-</div>
-
-{{#each checker as |user|}}
-<ul>
-    <li>{{user.name}} {{user.lastName}} - <b>{{{user.role}}}</b> <a href="/delete-user/{{this._id}}"><input type="submit" value="Delete"></a>
-    </li>
-</ul>
-{{/each}}
-</div>
-<br>
-<br>
--->
 <br>
 <br>
 <div class="uk-child-width-1-2@s uk-grid-match" uk-grid>
@@ -66,35 +35,25 @@
     <div>
         <div class="uk-card uk-card-hover uk-card-default uk-card-small uk-card-body uk-card-primary">
             <h3 class="uk-card-title uk-card-primary"></h3>
-           
 
-    <h3>{{user.name}} {{user.lastName}} - <b>{{{user.role}}}</b> </h3>
-    <p>{{user.email}}</p>
-    <button class="uk-button uk-button-primary uk-button-small" type="submit" value="Delete"><a href="/delete-user/{{this._id}}"Delete</button><a href="/delete-user/{{this._id}}"Delete</button></a> </p>
 
+            <h3>{{user.name}} {{user.lastName}} - <b>{{{user.role}}}</b> </h3>
+            <p>{{user.email}}</p>
+            <button class="uk-button uk-button-primary uk-button-small staffprofilebutton" type="submit"
+                value="Delete"><a href="/delete-student/{{this._id}}">Delete</a></button>
 
 
         </div>
     </div>
     {{/each}}
-    
-{{#each checker as |user|}}
+
+    {{#each checker as |user|}}
     <div>
         <div class="uk-card uk-card-hover uk-card-default uk-card-small uk-card-body uk-card-secondary">
             <h3 class="uk-card-title uk-card-secondary"></h3>
-           
-
-    <h3>{{user.name}} {{user.lastName}} - <b>{{{user.role}}}</b> </h3>
-    <p>{{user.email}}</p>
-   <button class="uk-button uk-button-primary uk-button-small" type="submit" value="Delete"><a href="/delete-user/{{this._id}}"Delete</button></a> </p>
 
 
-
-        </div>
-    </div>
-    {{/each}}
-    
-
-
-
-    
+            <h3>{{user.name}} {{user.lastName}} - <b>{{{user.role}}}</b> </h3>
+            <p>{{user.email}}</p>
+            <button class="uk-button uk-button-primary uk-button-small" type="submit" value="Delete"><a
+                    href="/delete-user/{{this._id}}" Delete</button> </a> </p> </div> </div> {{/each}}

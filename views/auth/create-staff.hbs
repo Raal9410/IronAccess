@@ -1,51 +1,50 @@
-
-
 <div class="paddinggeneral">
-<div class="uk-panel uk-flex">
-  <div class="uk-align-center">
-    <h2>Create Staff</h2>
+    <div class="uk-panel uk-flex">
+        <div class="uk-align-center">
+            <h2>Crear Staff/Checker</h2>
 
-<form action="/create-staff" method="POST">
-<div class="uk-margin">
-        <div class="uk-inline">
-            <span class="uk-form-icon" uk-icon="icon: user"></span>
-            <input class="uk-input" id="name" name="name" placeholder="name">
-        </div>
-    </div>
+            <form action="/create-staff" method="POST">
+                <div class="uk-margin">
+                    <div class="uk-inline">
+                        <span class="uk-form-icon" uk-icon="icon: user"></span>
+                        <input class="uk-input" id="name" name="name" placeholder="Nombre">
+                    </div>
+                </div>
 
-    <div class="uk-margin">
-        <div class="uk-inline">
-            <span class="uk-form-icon " uk-icon="user"></span>
-            <input class="uk-input " id="lastName" name="lastName" placeholder="Last name">
+                <div class="uk-margin">
+                    <div class="uk-inline">
+                        <span class="uk-form-icon " uk-icon="user"></span>
+                        <input class="uk-input " id="lastName" name="lastName" placeholder="Apellido">
+                    </div>
+                </div>
+                <div class="uk-margin">
+                    <div class="uk-inline">
+                        <span class="uk-form-icon " uk-icon="google"></span>
+                        <input class="uk-input" type="email" name="email" placeholder="Email">
+                    </div>
+                </div>
+
+                <div class="uk-margin">
+                    <div class="uk-inline">
+                        <span class="uk-form-icon " uk-icon="icon:lock"></span>
+                        <input class="uk-input" type="password" name="password" placeholder="Contraseña">
+                    </div>
+                </div>
+                <div>
+                    <label for="role">Selecciona el rol</label>
+                    <select name="role" id="role">
+                        <option value="STAFF">Staff</option>
+                        <option value="CHECKER">Checker</option>
+                    </select>
+                    <br>
+                    <br>
+                </div>
+
+                <button class="uk-button uk-button-primary uk-button-small" type="submit" value=""><a href="/profile">Go
+                        Back</a></button>
+                <button class="uk-button uk-button-primary uk-button-small" type="submit" value="Create">Create</button>
+
+            </form>
         </div>
     </div>
-    <div class="uk-margin">
-        <div class="uk-inline">
-            <span class="uk-form-icon " uk-icon="google"></span>
-            <input class="uk-input" type="email" name="email" placeholder="Email">
-        </div>
-    </div>
-    
-    <div class="uk-margin">
-        <div class="uk-inline">
-            <span class="uk-form-icon " uk-icon="icon:lock"></span>
-            <input class="uk-input" type="password" name="password" placeholder="Password ?">
-        </div>
-    </div>
-    <div>
-    <label for="role">Select Role</label>
-<select name="role" id="role">
-  <option value="STAFF">Staff</option>
-  <option value="CHECKER">Checker</option>
-</select>
-    <br>
-    <br>
-    </div>
-   
-     <button class="uk-button uk-button-primary uk-button-small" type="submit" value="" ><a href="/profile">Go Back</a></button>
-     <button class="uk-button uk-button-primary uk-button-small" type="submit" value="Create">Create</button>
-     
-     </form>
-  </div>
-  </div>
-  </div>
+</div>

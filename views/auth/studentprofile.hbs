@@ -1,27 +1,29 @@
-
 <nav class="uk-navbar-container" uk-navbar>
     <div class="uk-navbar-left">
         <ul class="uk-navbar-nav">
-            <li class="uk-active"><a href="#"><img class="imgindex" src="/images/logo.png" alt=""> <p> Student profile</p></a></li>
+            <li class="uk-active"><a href="#"><img class="imgindex" src="/images/logo.png" alt="">
+                    <p> Perfil de estudiante</p>
+                </a></li>
             <li>
                 <a href="#"> {{student.name}} {{student.lastName}}</a>
-        </div></li>
-            
-        </ul>
+    </div>
+    </li>
+
+    </ul>
 
     </div>
 
     <div class="uk-navbar-right">
 
         <ul class="uk-navbar-nav">
-            
+
             <li>
-                <li class="uk-active"><a href="../student-guest">Invite someone</a></li>
+            <li class="uk-active"><a href="../student-guest">Invita a alguien</a></li>
             <li>
-                  
-            
-                
-          
+
+
+
+
             <li><a href="/">Logout</a></li>
         </ul>
 
@@ -39,14 +41,15 @@
     <div>
         <div class="uk-card uk-card-hover uk-card-default uk-card-small uk-card-body uk-card-secondary">
             <h3 class="uk-card-title uk-card-secondary"></h3>
-           
 
-    <h3>{{user.name}} {{user.lastName}} - <b>GUEST</b> </h3>
-        <p><b>{{{user.date}}}</b></p> 
-    <p>{{user.email}}</p>
-   <p>
-       <button class="uk-button uk-button-primary uk-button-small staffprofilebutton" type="submit" value="Delete" ><a href="/delete-guest/{{user._id}}">Delete</a></button>
-       </p>
+
+            <h3>{{this.name}} {{this.lastName}} - <b>INVITADO</b> </h3>
+            <p><b>{{{this.date}}}</b></p>
+            <p>{{user.email}}</p>
+            <p>
+                <button class="uk-button uk-button-primary uk-button-small staffprofilebutton" type="submit"
+                    value="Delete"><a href="/delete-guest/{{user._id}}">Delete</a></button>
+            </p>
 
 
 

@@ -2,26 +2,22 @@
     <div class="uk-navbar-left">
         <ul class="uk-navbar-nav">
             <li class="uk-active"><a href="#"><img class="imgindex" src="/images/logo.png" alt="">
-                    <p>Staff profile</p>
+                    <p>Perfil de Staff</p>
                 </a></li>
             <li>
                 <a href="#"> {{staff.name}} {{staff.lastName}}</a>
     </div>
     </li>
-
-    </ul>
-
     </div>
 
     <div class="uk-navbar-right">
 
         <ul class="uk-navbar-nav">
-            <li class="uk-active"><a href="../create-student">Create student</a></li>
+            <li class="uk-active"><a href="../create-student">Crear estudiante</a></li>
             <li>
-            <li class="uk-active"><a href="../invite-guest">Invite someone</a></li>
+            <li class="uk-active"><a href="../invite-guest">Invite a alguien</a></li>
             <li>
-            <li class="uk-active"><a href="../edit-staff">Edit your profile</a></li>
-            <li>
+            <li class="uk-active"><a href="../edit-staff">Edita tu perfil</a></li>
 
 
             <li><a href="/">Logout</a></li>
@@ -46,8 +42,9 @@
             <h3>{{user.name}} {{user.lastName}} - <b>{{{user.role}}}</b> </h3>
             <p>{{user.course}}</p>
             <p>{{user.email}}</p>
-            
-<button class="uk-button uk-button-primary uk-button-small staffprofilebutton" type="submit" value="Delete" ><a href="/delete-student/{{this._id}}">Delete</a></button>
+
+            <button class="uk-button uk-button-primary uk-button-small staffprofilebutton" type="submit"
+                value="Delete"><a href="/delete-student/{{this._id}}">Delete</a></button>
 
 
         </div>
@@ -55,54 +52,24 @@
     {{/each}}
 </div>
 
+<div class="uk-child-width-1-2@s uk-grid-match" uk-grid>
+    {{#each guest as |user|}}
+    <div>
+        <div class="uk-card uk-card-hover uk-card-default uk-card-small uk-card-body uk-card-secondary">
+            <h3 class="uk-card-title uk-card-secondary"></h3>
 
-    <div class="uk-child-width-1-2@s uk-grid-match" uk-grid>
-        {{#each guest as |user|}}
-        <div>
-            <div class="uk-card uk-card-hover uk-card-default uk-card-small uk-card-body uk-card-secondary">
-                <h3 class="uk-card-title uk-card-secondary"></h3>
+
+            <h3>{{this.name}} {{this.lastName}} - <b>INVITADO</b> </h3>
+            <p><b>{{{this.date}}}</b></p>
+            <p>{{user.email}}</p>
+            <p>
+                <button class="uk-button uk-button-primary uk-button-small staffprofilebutton" type="submit"
+                    value="Delete"><a href="/delete-student/{{this._id}}">Delete</a></button>
+            </p>
 
 
-                <h3>{{this.name}} {{this.lastName}} - <b>GUEST</b> </h3>
-                <p><b>{{{this.date}}}</b></p>
-                <p>{{user.email}}</p>
-                
-                    <button class="uk-button uk-button-primary uk-button-small staffprofilebutton" type="submit" value="Delete" ><a href="/delete-student/{{this._id}}">Delete</a></button>
-            </div>
         </div>
+    </div>
 
-        {{/each}}
-        </div>
-        <!--
-<h1>Staff profile</h1>
-<h2>Welcome {{staff.name}} {{staff.lastName}}</h2>
-<div class="students">
-    <h3>Students</h3>
-{{#each student as |user|}}
-<ul>
-    <li>{{user.name}} {{user.lastName}} - <b>{{{user.role}}}</b>  <a href="/delete-student/{{this._id}}"><input type="submit" value="Delete"></a>
-    </li>
-</ul>
-{{/each}}
-
-<div class="staffguest">
-    <h3>Guests</h3>
-    {{#each guest}}
-<ul>
-    <li>{{this.name}} {{this.lastName}} - <b>{{{this.date}}}</b> <a href="/delete-guest/{{this._id}}"><input type="submit" value="Delete"></a>
-    </li>
-</ul>
-{{/each}}
+    {{/each}}
 </div>
-</div>
-<a href="/invite-guest">Invite somenone</a>
-<br>
-<br>
-<a href="/edit-staff">Edit profile</a>
-<br>
-<br>
-<a href="../create-student"> Create student</a>
-<br>
-<br>
-<a href="/logout">Logout</a>
--->
