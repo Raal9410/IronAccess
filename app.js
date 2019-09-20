@@ -3,7 +3,6 @@ require('dotenv').config();
 const bodyParser   = require('body-parser');
 const cookieParser = require('cookie-parser');
 const express      = require('express');
-
 const hbs          = require('hbs');
 const mongoose     = require('mongoose');
 const logger       = require('morgan');
@@ -13,7 +12,7 @@ const session      = require('express-session')
 const ensureLogin  = require('connect-ensure-login')
 
 mongoose
-  .connect(process.env.DB ||'mongodb://localhost/IronAccess', {useNewUrlParser: true})
+  .connect(process.env.DB, {useNewUrlParser: true})
   .then(x => {
     console.log(`Connected to Mongo! Database name: "${x.connections[0].name}"`)
   })
