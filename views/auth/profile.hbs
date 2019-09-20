@@ -3,7 +3,7 @@
     <div class="uk-navbar-left">
 
         <ul class="uk-navbar-nav">
-            <li class="uk-active"><a href="#">Boss profile</a></li>
+            <li class="uk-active"><a href="#"><img class="imgindex" src="/images/logo.png" alt=""> <p> Boss profile</p></a></li>
             <li>
                 <a href="#"> {{boss.name}} {{boss.lastName}}</a>
                
@@ -21,7 +21,7 @@
             <li>
                 
           
-            <li><a href="/logout">Logout</a></li>
+            <li><a href="/">Logout</a></li>
         </ul>
 
     </div>
@@ -70,7 +70,7 @@
 
     <h3>{{user.name}} {{user.lastName}} - <b>{{{user.role}}}</b> </h3>
     <p>{{user.email}}</p>
-   <p><a href="/delete-user/{{this._id}}"><input type="submit" value="Delete"></a> </p>
+    <button class="uk-button uk-button-primary uk-button-small" type="submit" value="Delete"><a href="/delete-user/{{this._id}}"Delete</button><a href="/delete-user/{{this._id}}"Delete</button></a> </p>
 
 
 
@@ -86,7 +86,7 @@
 
     <h3>{{user.name}} {{user.lastName}} - <b>{{{user.role}}}</b> </h3>
     <p>{{user.email}}</p>
-   <p><a href="/delete-user/{{this._id}}"><input type="submit" value="Delete"></a> </p>
+   <button class="uk-button uk-button-primary uk-button-small" type="submit" value="Delete"><a href="/delete-user/{{this._id}}"Delete</button></a> </p>
 
 
 

@@ -1,25 +1,50 @@
-<h2>Invite someone</h2>
-
+<div class="paddinggeneral">
 <form action="/student-guest" method="POST">
-<label for="name">Name</label>
-<input type="text" name="name" id="name" placeholder="Name">
+<div class="uk-margin uk-flex">
+    <div class="uk-align-center">
+  <div class="guest">
+  <h2>Invite a alguien</h2>
+  </div>
+    <div class="uk-margin">
+        <div class="uk-inline ">
+            <span class="uk-form-icon" uk-icon="icon: user"></span>
+            <input class="uk-input " type="text"  name= "name" placeholder="name">
+        </div>
+    </div>
 
-<label for="lastName">Last Name</label>
-<input type="text" name="lastName" id="lastName" placeholder="Last Name">
+    <div class="uk-margin">
+        <div class="uk-inline">
+            <span class="uk-form-icon  " uk-icon="user"></span>
+            <input class="uk-input " type="text" name="lastName" placeholder="Last Name">
+        </div>
+    </div>
+    <div class="uk-margin">
+        <div class="uk-inline">
+            <span class="uk-form-icon " uk-icon="google"></span>
+            <input class="uk-input" type="email" name="email" placeholder="Email">
+        </div>
+    </div>
+  
+    <div class="uk-margin">
+        <div class="uk-inline">
+            <span class="uk-form-icon "uk-icon="comments"></span>
+            <input class="uk-input" type="text" name="message" placeholder="Message">
+        </div>
+    </div><div class="uk-margin">
+        <div class="uk-inline">
+            <span class="uk-form-icon " uk-icon="calendar"></span>
+            <input class="uk-input" type="date" name="date" id="date" placeholder="Date" >
+        </div>
+    </div>
+    <br>
+    <br>
 
-<label for="email">Email</label>
-<input type="email" name="email" id="email" placeholder="Email">
-<br>
-<br>
-<label for="message">Message</label>
-<textarea type="text" name="message" id="" placeholder="Message"></textarea>
-<br>
-<br>
-<label for="date">Select Date</label>
-<input type="date" name="date" id="date">
 
-<input type="submit" value="Invite">
+<button class="uk-button uk-button-primary uk-button-small"><a href="/studentprofile">Back</a></button>
+
+<button class="uk-button uk-button-primary uk-button-small" type="submit" value="Invite">Invite</button>
+
+
 </form>
+</div>
 
-<a href="/studentprofile">Go Back</a>
-</form>
