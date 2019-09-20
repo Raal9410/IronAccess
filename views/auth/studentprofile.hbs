@@ -2,7 +2,7 @@
 <nav class="uk-navbar-container" uk-navbar>
     <div class="uk-navbar-left">
         <ul class="uk-navbar-nav">
-            <li class="uk-active"><a href="#">Student profile</a></li>
+            <li class="uk-active"><a href="#">Perfil de estudiante</a></li>
             <li>
                 <a href="#"> {{student.name}} {{student.lastName}}</a>
         </div></li>
@@ -16,7 +16,7 @@
         <ul class="uk-navbar-nav">
             
             <li>
-                <li class="uk-active"><a href="../student-guest">Invite someone</a></li>
+                <li class="uk-active"><a href="../student-guest">Invita a alguien</a></li>
             <li>
                   
             
@@ -41,7 +41,7 @@
             <h3 class="uk-card-title uk-card-secondary"></h3>
            
 
-    <h3>{{this.name}} {{this.lastName}} - <b>GUEST</b> </h3>
+    <h3>{{this.name}} {{this.lastName}} - <b>INVITADO</b> </h3>
         <p><b>{{{this.date}}}</b></p> 
     <p>{{user.email}}</p>
    <p><a href="/delete-guest/{{this._id}}"><input type="submit" value="Delete"></a> </p>

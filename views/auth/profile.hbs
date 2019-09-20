@@ -3,7 +3,7 @@
     <div class="uk-navbar-left">
 
         <ul class="uk-navbar-nav">
-            <li class="uk-active"><a href="#">Boss profile</a></li>
+            <li class="uk-active"><a href="#">Perfil del jefe</a></li>
             <li>
                 <a href="#"> {{boss.name}} {{boss.lastName}}</a>
                
@@ -17,7 +17,7 @@
     <div class="uk-navbar-right">
 
         <ul class="uk-navbar-nav">
-            <li class="uk-active"><a href="../create-staff">Create staff</a></li>
+            <li class="uk-active"><a href="../create-staff">Crear staff</a></li>
             <li>
                 
           
@@ -28,37 +28,6 @@
 
 </nav>
 
-
-
-
-
-
-
-
-
-
-
-<!--
-    <div class="staff">
-    
-{{#each staff as |user|}}
-<ul>
-    <li>{{user.name}} {{user.lastName}} - <b>{{{user.role}}}</b> <a href="/delete-user/{{this._id}}"><input type="submit" value="Delete"></a>
-    </li>
-</ul>
-{{/each}}
-</div>
-
-{{#each checker as |user|}}
-<ul>
-    <li>{{user.name}} {{user.lastName}} - <b>{{{user.role}}}</b> <a href="/delete-user/{{this._id}}"><input type="submit" value="Delete"></a>
-    </li>
-</ul>
-{{/each}}
-</div>
-<br>
-<br>
--->
 <br>
 <br>
 <div class="uk-child-width-1-2@s uk-grid-match" uk-grid>
@@ -70,7 +39,7 @@
 
     <h3>{{user.name}} {{user.lastName}} - <b>{{{user.role}}}</b> </h3>
     <p>{{user.email}}</p>
-   <p><a href="/delete-user/{{this._id}}"><input type="submit" value="Delete"></a> </p>
+   <p><a href="/delete-user/{{this._id}}"><input type="submit" value="Borrar"></a> </p>
 
 
 
@@ -86,7 +55,7 @@
 
     <h3>{{user.name}} {{user.lastName}} - <b>{{{user.role}}}</b> </h3>
     <p>{{user.email}}</p>
-   <p><a href="/delete-user/{{this._id}}"><input type="submit" value="Delete"></a> </p>
+   <p><a href="/delete-user/{{this._id}}"><input type="submit" value="Borrar"></a> </p>
 
 
 

@@ -4,7 +4,7 @@ const ensureLogin = require('connect-ensure-login')
 const { catchErrors } = require('../middlewares/catchErrors')
 const checkRole = require('../middlewares/checkRole')
 
-const {login, loginForm, logout, profile, staffprofile, studentProfile, guestCheckProfileForm, guestChecker} = require('../controllers/index.controller')
+const {login, loginForm, logout, profile, staffprofile, studentProfile, guestCheckProfileForm, guestChecker, guestCheckerForm, removeGuest} = require('../controllers/index.controller')
 
 const {createUser, createUserForm, deleteUser} = require('../controllers/bosscontroller')
 const {editStaffForm, editStaff, createStudentForm, createStudent, deleteStudent, inviteGuestForm, inviteGuest, deleteGuest} = require('../controllers/staffcontroller')
@@ -41,7 +41,9 @@ router.post('/student-guest', ensureLogin.ensureLoggedIn(), checkRole('STUDENT')
 router.get('/delete-student-guest/:id', ensureLogin.ensureLoggedIn(), checkRole('STUDENT'), catchErrors(deleteStudentGuest))
 
 //Checker routes
-router.get('/guestchecker', checkRole('CHECKER'), ensureLogin.ensureLoggedIn(), guestCheckProfileForm)
-router.post('/guestchecker', checkRole('CHECKER'), ensureLogin.ensureLoggedIn(), catchErrors(guestChecker))
+router.get('/guestlist', checkRole('CHECKER'), ensureLogin.ensureLoggedIn(), guestCheckProfileForm)
+router.get('/guestchecker', checkRole('CHECKER'), ensureLogin.ensureLoggedIn(), guestCheckerForm)
+router.get('/guest-checker', checkRole('CHECKER'), ensureLogin.ensureLoggedIn(), catchErrors(guestChecker))
+router.get('/remove-guest/',  checkRole('CHECKER'), ensureLogin.ensureLoggedIn(), catchErrors(removeGuest))
 router.get('/logout', logout)
 module.exports = router

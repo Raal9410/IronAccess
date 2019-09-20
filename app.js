@@ -11,8 +11,10 @@ const passport     = require('./handlers/passport')
 const session      = require('express-session')
 const ensureLogin  = require('connect-ensure-login')
 
+//process.env.DB
+
 mongoose
-  .connect(process.env.DB, {useNewUrlParser: true})
+  .connect('mongodb://localhost/IronAccess', {useNewUrlParser: true})
   .then(x => {
     console.log(`Connected to Mongo! Database name: "${x.connections[0].name}"`)
   })

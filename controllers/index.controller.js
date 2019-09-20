@@ -10,7 +10,7 @@ exports.login = (req, res, next) => {
   } else if (req.user.role === 'STAFF') {
     res.redirect('/staffprofile')
   } else if (req.user.role === 'CHECKER') {
-    res.redirect('/guestchecker')
+    res.redirect('/guestlist')
   } else if (req.user.role === 'STUDENT') {
     res.redirect('/studentprofile')
   }else{ 
@@ -40,14 +40,28 @@ res.render('auth/studentprofile', {student, guest}) //, {user: req.user}
   }
 
 exports.guestCheckProfileForm = async (req, res, next) => {
-  res.render('auth/guestcheker')
+  const {code} = req.query
+  const guest = await Guest.findOne({code: req.body.code})
+  res.render('auth/guestlist', guest)
+}
+
+exports.guestCheckerForm = (req,res, next) => {
+  res.render('auth/guestchecker')
 }
 
 exports.guestChecker = async(req,res, next) =>{
-  const confirmguest = await Guest.find({code: req.body.code})
+  const confirmguest = await Guest.findOne({code: req.query.code})
   console.log(confirmguest)
-  res.redirect('guestchecker')
+  res.render('auth/guestlist', confirmguest)
 }
+
+exports.removeGuest= async(req, res) => {
+  const {code} = req.query
+  await Guest.findOneAndDelete(code)
+  res.redirect('/guestlist')
+  
+}
+
 exports.logout =(req, res, next)=>{
   req.logout()
   res.redirect('login')
